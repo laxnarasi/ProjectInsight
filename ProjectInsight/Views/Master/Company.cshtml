@@ -1,0 +1,189 @@
+﻿
+@{
+    ViewBag.Title = "Company";
+}
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/UI/company.js"></script>
+<link href="~/Content/table/table1.css" rel="stylesheet" type="text/css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>
+<script>
+    var path = '@Url.Content("~")';
+</script>
+
+@*<link rel="stylesheet" href="~/Content/bootstrapTable/bootstrap/css/bootstrap.min1.css">
+    <link rel="stylesheet" href="~/Content/bootstrapTable/bootstrap-table/src/bootstrap-table.css">
+    <link rel="stylesheet" href="~/Content/bootstrapTable/examples.css">
+
+    <script src="~/Content/bootstrapTable/jquery.min.js"></script>
+    <script src="~/Content/bootstrapTable/bootstrap/js/bootstrap.min1.js"></script>
+    <script src="~/Content/bootstrapTable/bootstrap-table/src/bootstrap-table.js"></script>
+    <script src="../ga.js"></script>*@
+
+<div class="container" ng-app="companyApp" ng-controller="companyCtrl">
+    <h3>HEADER DETAILS</h3><hr />
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="CompanyCode" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">CODE</label>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <input type='text' class="form-control input-sm" id="CompanyCode" ng-model="Code" />
+            </div>
+            <label for="Name" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">Name</label>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <input type="text" class="form-control input-sm" id="Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ContactPerson" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">Contact Person</label>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <input type="text" class="form-control input-sm" id="ContactPerson">
+            </div>
+            <label for="ContactNo" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">Contact No</label>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <input type="text" class="form-control input-sm" id="ContactNo">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="EmailAddress" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">Email Address</label>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <input type="text" class="form-control input-sm" id="EmailAddress">
+            </div>
+            <label for="PAN" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">PAN</label>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <input type="text" class="form-control input-sm" id="PAN">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="TAN" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">TAN</label>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <input type="text" class="form-control input-sm" id="TAN">
+            </div>
+            <label for="ContractSigned" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">Contract Signed</label>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <input type="text" class="form-control input-sm" id="ContractSigned">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ContractStartDate" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">Contract Start Date</label>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">           
+                <input type="text" class="date-picker form-control input-sm" id="ContractStartDate"
+                       data-date-format="dd/mm/yyyy"   placeholder="DD/MM/YYYY" />
+            </div>
+            <label for="ContractEndDate" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">Contract End Date</label>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">               
+                <input type="text" class="date-picker form-control input-sm" id="ContractEndDate"
+                       data-date-format="dd/mm/yyyy" placeholder="DD/MM/YYYY" />
+            </div>
+        </div>
+
+
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>ADDRESS DETAILS </h4><hr>
+                <input type="button" class="btn btn-default" value="Add Address" ng-click="NewAddress()" />
+                <div class="table-responsive">
+                    <table class="table table-bordered" style="width:100%" id="tblAddress" data-show-refresh="true"
+                           data-show-columns="true"
+                           data-search="true"
+                           data-query-params="queryParams"
+                           data-toolbar=".toolbar">
+                        <thead>
+                            <tr>
+                                <th data-field="AddressType">Address Type</th>
+                                <th data-field="Address">Address</th>
+                                <th data-field="Place">Place</th>
+                                <th data-field="City">City</th>
+                                <th data-field="State">State</th>
+                                @*<th data-field="Pincode">Pincode</th>*@
+                                <th data-field="Country">Country</th>
+                                <th data-field="LanNo1">Contact</th>
+                                
+                                <th data-field="Email">Email</th>
+                                <th data-field="Web">Web</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in AddressDetails">
+                                <td><span ng-bind="x.AddressType" /></td>
+                                <td><span ng-bind="x.Address()" /></td>
+                                <td><span ng-bind="x.Place" /></td>
+                                <td><span ng-bind="x.City" /></td>
+                                <td><span ng-bind="x.State" /></td>
+                                @*<td><span ng-bind="x.Pincode" /></td>*@
+                                <td><span ng-bind="x.Country" /></td>
+                                <td><span ng-bind="x.Contact()" /></td>                               
+                                <td><span ng-bind="x.Email" /></td>
+                                <td><span ng-bind="x.Web" /></td>
+                                <td>
+                                    <a data-ng-click="x.Remove(x)"><img src="~/Images/remove.png"><img /></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>ACCOUNT DETAILS </h4><hr>
+                <input type="button" class="btn btn-default" value="Add ACCOUNT" ng-click="NewAccount()" />
+                <div class="table-responsive">
+                    <table class="table table-bordered" style="width:100%" id="tblAddress" data-show-refresh="true"
+                           data-show-columns="true"
+                           data-search="true"
+                           data-query-params="queryParams"
+                           data-toolbar=".toolbar">
+                        <thead>
+                            <tr>
+                                <th>Account Type</th>
+                                <th>Bank</th>
+                                <th>Branch</th>
+                                <th>Account No</th>
+                                <th>IFSC CODE </th>
+                                <th>MICR NO</th>
+                                <th>Pin Code</th> 
+                                <th>Delete</th>                              
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in AccountDetails">
+                                <td><span ng-bind="x.AccountType" /></td>
+                                <td><span ng-bind="x.Bank" /></td>
+                                <td><span ng-bind="x.Branch" /></td>
+                                <td><span ng-bind="x.AccountNo" /></td>
+                                <td><span ng-bind="x.IFSCCODE" /></td>
+                                <td><span ng-bind="x.MICRNO" /></td>
+                                <td><span ng-bind="x.PinCode" /></td>                                
+                                <td>
+                                    <a data-ng-click="x.Remove(x)"><img src="~/Images/remove.png"><img /></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    <br />
+    <hr />
+    <input type="button" class="btn btn-success" value="SEND FOR APPROVAL" />
+
+</div>
+
+<script type="text/javascript">
+        $(function () {
+            //$('#datetimepicker1').datetimepicker({ format: 'DD/MM/YYYY' });
+        });
+</script>
+
+<link rel="stylesheet" href="http://cdn.rawgit.com/eternicode/bootstrap-datepicker/1.3.0/css/datepicker3.css">
+<script src="http://cdn.rawgit.com/eternicode/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+<script src="http://cdn.rawgit.com/niftylettuce/bootstrap-datepicker-mobile/9999ca720ebf89600bda1659c96a291dc447ff39/bootstrap-datepicker-mobile.js"></script>

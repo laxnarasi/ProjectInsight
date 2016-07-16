@@ -1,0 +1,293 @@
+﻿
+@{
+    ViewBag.Title = "OrderBook";
+    Layout = null;
+}
+
+<br />
+
+ 
+
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  
+
+ 
+<div class="container" style="margin:150px auto;">
+    <form action="index_submit" method="get" accept-charset="utf-8" role="form">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="test_data">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+                    </div>
+                    <!-- /btn-group -->
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="container">
+       <h3>HEADER DETAILS</h3><hr />
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Project Name</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type='text' class="form-control input-sm" id="test_data1" />
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">	Order Book Date</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="form-control input-sm" id="inputName3"  >
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">PO Reference No</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="form-control input-sm" id="inputName3"  >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Customer</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <div class='input-group date'>
+                    <input type='text' class="form-control input-sm" id="test_data" />
+                    <div class="input-group-btn">
+                        <span class="input-group-addon input-sm">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+                    </div>
+                </div>
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Company</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="email" class="form-control input-sm" id="inputEmail3">
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Location</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="form-control input-sm" id="inputName3"  >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Project Manager</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="email" class="form-control input-sm" id="inputEmail3"  >
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Account Manager</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="form-control input-sm" id="inputName3"  >
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Delivery Manager</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="form-control input-sm" id="inputName3"  >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Product</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="email" class="form-control input-sm" id="inputEmail3"  >
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Contract Type</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="form-control input-sm" id="inputName3"  >
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Cost Center</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="form-control input-sm" id="inputName3"  >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Profit Center</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="email" class="form-control input-sm" id="inputEmail3"  >
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Project Category</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="form-control input-sm" id="inputName3"  >
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Signed Date</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <div class='input-group date' id='datetimepicker1111'>
+                    <input type='text' class="form-control input-sm" id="datetimepicker111"/>
+                    <span class="input-group-addon input-sm">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Contract Start Date</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control input-sm" id="datetimepicker1" />
+                    <span class="input-group-addon input-sm">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Contract End Date</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control input-sm" id="datetimepicker1" />
+                    <span class="input-group-addon input-sm">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Project Start Date</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control input-sm" id="datetimepicker1" />
+                    <span class="input-group-addon input-sm">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Project End Date</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="date-picker form-control input-sm" 
+                        data-date-format="mm/dd/yyyy" name="birthday" placeholder="MM/DD/YY" />
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Project Status</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="form-control input-sm" id="inputName3"  >
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Fixed Contract</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+               
+                <select class="form-control  input-sm">
+                    <option>YES</option>
+                    <option>NO</option>                    
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Order Currency</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="email" class="form-control input-sm" id="inputEmail3"  >
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Conversion Rate </label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="form-control input-sm" id="inputName3"  >
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Order Value-FC</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="form-control input-sm" id="inputName3"  >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Order Value-LC</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="email" class="form-control input-sm" id="inputEmail3"  >
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Total Cost</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="form-control input-sm" id="inputName3"  >
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label"> GP Percentage</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="text" class="form-control input-sm" id="inputName3"  >
+            </div>
+        </div>
+    </form>
+    <br />
+    <h4>PROJECT BUDGET</h4><hr />
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Resource Cost</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="number"   class="form-control input-sm" id="inputEmail3">
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">	Third Party Cost</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="number" class="form-control input-sm" id="inputName3">
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Travel Cost</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="number" class="form-control input-sm" id="inputName3">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Perdiem Cost</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="number" class="form-control input-sm" id="inputEmail3">
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">	Visa  Party Cost</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="number" class="form-control input-sm" id="inputName3">
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Accomodation  Cost</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="number" class="form-control input-sm" id="inputName3">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Other  Cost</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="number" class="form-control input-sm" id="inputEmail3">
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">	GP Value</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <input type="number" class="form-control input-sm" id="inputName3">
+            </div>
+            <label for="inputEmail3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Order Value inclusive of Tax</label>
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <select class="form-control  input-sm">
+                    <option>YES</option>
+                    <option>NO</option>
+                </select>
+            </div>
+        </div>
+    </form>
+
+    <br />
+    <hr />
+    <input type="button" class="btn btn-success" value="SEND FOR APPROVAL"/>
+
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="~/Scripts/bootstrap-suggest.js"></script>
+
+<script type="text/javascript">
+            $(function () {
+               // $('#datetimepicker1').datetimepicker({ format: 'DD/MM/YYYY' });
+                var testdataBsSuggest = $("#test_data").bsSuggest({
+                    indexId: 2,
+                   indexKey: 1,
+                    //showHeader: true,
+                    data: {
+                        'value': [
+                            { "EmployeeId": "E2", "EmployeeName1": "K Kumar", "EmployeeName": "K Kumar", "Category": "Employee" },
+			                { "EmployeeId": "E3", "EmployeeName1": "S Rajan", "EmployeeName": "S Rajan", "Category": "Employee" },
+			                { "EmployeeId": "E2001", "EmployeeName1": "Ganesh", "EmployeeName": "Ganesh", "Category": "Employee" },
+			                { "EmployeeId": "E2002", "EmployeeName1": "Ajmal Khan", "EmployeeName": "Ajmal Khan", "Category": "Employee" },
+			                { "EmployeeId": "E2003", "EmployeeName1": "AMUTHASAGARAN A", "EmployeeName": "AMUTHASAGARAN A", "Category": "Employee" },
+			                { "EmployeeId": "E2004", "EmployeeName1": "ANITHA P", "EmployeeName": "ANITHA P", "Category": "Employee" },
+                        ],
+                        'defaults': 'http://www.1.com'
+                    }
+                })
+            });
+
+</script>
+@*<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+<script src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+<link href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">*@
+
+@*<link rel="stylesheet" href="http://cdn.rawgit.com/eternicode/bootstrap-datepicker/1.3.0/css/datepicker3.css">
+<script src="http://cdn.rawgit.com/eternicode/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+<script src="http://cdn.rawgit.com/niftylettuce/bootstrap-datepicker-mobile/9999ca720ebf89600bda1659c96a291dc447ff39/bootstrap-datepicker-mobile.js"></script>*@
+
+
+@*
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="http://www.jqueryscript.net/demo/AJAX-enabled-Autocomplete-Plugin-For-Bootstrap-Search-Suggest/bootstrap-suggest.js"></script>*@

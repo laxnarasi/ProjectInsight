@@ -1,0 +1,102 @@
+<div class="modal-content">
+    
+        <div class="modal-header">
+            <button type="button" 
+                    class="close" 
+                    ng-click="cancel()"
+                    data-dismiss="modal" 
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">ADDRESS DETAIL</h4>
+        </div>
+        <div class="modal-body form-horizontal">
+				<div class=" "  >
+			<form name="form"  role="form">
+				<div class="form-group">           
+					<label for="CompanyCode" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Address Type</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						 <input type="text" class="form-control" ng-model="address.AddressType" ng-required="true">
+					</div>      
+				</div>
+				
+				 <div class="form-group">					           
+					<label for="AddressLine1" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Address Line 1</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						<input type="text" class="form-control" ng-model="address.AddressLine1" ng-required="true">
+					</div>
+					<label for="AddressLine2" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Address Line 2</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						 <input type="text" class="form-control" ng-model="address.AddressLine2" ng-required="true">
+					</div>
+					<label for="AddressLine3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Address Line 3</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						<input type="text" class="form-control" ng-model="address.AddressLine3" ng-required="true">
+					</div>
+				</div>
+				 
+				 <div class="form-group">           
+					<label for="Place" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Place</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						 <input type="text" class="form-control" ng-model="address.Place" ng-required="true">
+					</div>
+					<label for="Name" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">	Pin Code</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						<input type="text" class="form-control" ng-model="address.Pincode" ng-required="true">
+					</div>					
+					<label for="City" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">City</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						<input type="text" class="form-control" ng-model="address.City" ng-required="true">
+					</div>
+				</div>
+				<div class="form-group">           
+					<label for="CompanyCode" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">State</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						 <input type="text" class="form-control" ng-model="address.State" ng-required="true">
+					</div>            
+					<label for="Country" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Country</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						 <input type="text" class="form-control" ng-model="address.Country" ng-required="true">
+					</div> 
+				</div>
+				
+				<div class="form-group">           
+					           
+					<label for="LanNo1" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Lan No 1</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						<input type="text" class="form-control" ng-model="address.LanNo1" ng-required="true">
+					</div>
+					<label for="LanNo2" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Lan No 2</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						 <input type="text" class="form-control" ng-model="address.LanNo2" ng-required="true">
+					</div> 
+					<label for="MobileNo" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">	Mobile No</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						<input type="text" class="form-control" ng-model="address.MobileNo" ng-required="true">
+					</div>
+				</div>
+				 
+				<div class="form-group">           
+					<label for="Telex" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Telex</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						 <input type="text" class="form-control" ng-model="address.Telex" ng-required="true">
+					</div>            
+					<label for="Email" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Email id</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						<input type="email" class="form-control" ng-model="address.Email" ng-required="true">
+					</div>
+					<label for="Name" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label">Web</label>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+						<input type="text" class="form-control" ng-model="address.Web" ng-required="true">
+					</div>
+				</div>
+				 
+             </form>
+ </div>			 
+        </div>
+        <div class="modal-footer">
+		<!--ng-disabled="form.$invalid"-->
+            <button type="button" ng-click="AddAddress()"  class="btn btn-success" ng-disabled="form.$invalid">  Save </button>
+            <button type="button" ng-click="cancel()" class="btn btn-danger"   data-dismiss="modal"> Cancel</button>
+            <div class="alert-danger" ng-if="error.length > 0 " ng-bind="error"></div>
+        </div>
+    </form>
+</div>

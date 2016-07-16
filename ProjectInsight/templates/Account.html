@@ -1,0 +1,58 @@
+<div class="modal-content">    
+	<div class="modal-header">
+		<button type="button" class="close" ng-click="cancel()"    data-dismiss="modal" 
+				aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<h4 class="modal-title">ACCOUNT DETAIL</h4>
+	</div>
+	<div class="modal-body form-horizontal">				 
+		<form name="form"  role="form">
+			<div class="form-group">           
+				<label for="CompanyCode" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">Account Type</label>
+				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+					 <input type="text" class="form-control" ng-model="account.AccountType" ng-required="true">
+				</div>      
+			</div>
+			
+			<div class="form-group">					           
+				<label for="AddressLine1" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">Bank</label>
+				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+					<input type="text" class="form-control" ng-model="account.Bank" ng-required="true">
+				</div>
+				<label for="AddressLine2" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">Branch</label>
+				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+					 <input type="text" class="form-control" ng-model="account.Branch" ng-required="true">
+				</div>
+			</div>
+			 
+			<div class="form-group">					           
+				<label for="AddressLine1" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">Account No</label>
+				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+					<input type="text" class="form-control" ng-model="account.AccountNo" ng-required="true">
+				</div>
+				<label for="AddressLine2" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">IFSC CODE</label>
+				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+					 <input type="text" class="form-control" ng-model="account.IFSCCODE" ng-required="true">
+				</div>
+			</div>
+			
+			<div class="form-group">					           
+				<label for="AddressLine1" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">MICR NO</label>
+				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+					<input type="text" class="form-control" ng-model="account.MICRNO" ng-required="true">
+				</div>
+				<label for="AddressLine2" class="col-xs-12 col-sm-12 col-md-3 col-lg-3 control-label">Pin Code</label>
+				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+					 <input type="text" class="form-control" ng-model="account.PinCode" ng-required="true">
+				</div>
+			</div>
+			 
+		 </form>
+	 
+	</div>
+	<div class="modal-footer">
+	<!--ng-disabled="form.$invalid"-->
+		<button type="button" ng-click="AddAccount()"  class="btn btn-success" ng-disabled="form.$invalid">  Save </button>
+		<button type="button" ng-click="cancel()" class="btn btn-danger"   data-dismiss="modal"> Cancel</button>
+		<div class="alert-danger" ng-if="error.length > 0 " ng-bind="error"></div>
+	</div>
+</div>
